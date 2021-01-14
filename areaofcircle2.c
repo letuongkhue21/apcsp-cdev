@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <math.h> 
 // for testing only - do not change
 void getTestInput(int argc, char* argv[], float* a, int* b)
@@ -19,7 +19,8 @@ void getTestInput(int argc, char* argv[], float* a, int* b)
    return area;
 } 
 
- int main(int argc, char* argv[]) 
+ int main(int argc, char* argv[])
+  
  { 
  while(1)
   { 
@@ -27,24 +28,25 @@ void getTestInput(int argc, char* argv[], float* a, int* b)
     float end  ;
    printf(" lowest radius of range:\n");
    scanf("%f" , &start);
-   if (start !=1)
+     
+   if (start < 0)
   {
      printf("not valid\n");
-     break;
+     
   }
 
   printf("highest radius of range:\n");
   scanf("%f" , &end);
-  if (end != 1)
+  if (start > end)
   { 
     printf(" not valid\n");
-    break;
+    
   }
 
 int reps = (end + 1 - start);
 
 float radius;
-float calculatedArea;
+float result;
   
   
  
@@ -58,11 +60,11 @@ float calculatedArea;
   // start and end rgc, char* argv[])
 radius = start;
 
-for (int i = 0; i < reps; i++)
+for (float i = start; i < (end +1) ; i++)
  {
-  calculatedArea = areaofCircle((float) radius+i);
-  printf("the area of a circle with a radius of %f is %f\n", start+i, calculatedArea);
+  float result = areaofCircle(i);
+  printf("the area of a circle with a radius of %f is %f\n", start+i, result);
  }
- break; 
+  break; 
 }
 }
