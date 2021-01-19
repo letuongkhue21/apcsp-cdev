@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <math.h> 
 // for testing only - do not change
 void getTestInput(int argc, char* argv[], float* a, int* b)
 {
@@ -15,7 +15,7 @@ void getTestInput(int argc, char* argv[], float* a, int* b)
 // return the result to be printed in main
  float areaofCircle (float radius)
 {
-   float area= radius* radius * 3.14159;
+   float area= radius* radius * M_PI;
    return area;
 } 
 
